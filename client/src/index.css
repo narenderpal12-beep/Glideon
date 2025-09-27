@@ -45,7 +45,12 @@
   --glideon-dark: hsl(210 20% 17%);
   --glideon-accent: hsl(0 83% 55%);
 }
-
+.mobilecustomthumbnail>button
+{
+  background-color: white;
+  height: 100px;
+  width: 100px;
+}
 .dark {
   --background: hsl(0 0% 0%);
   --foreground: hsl(200 6.6667% 91.1765%);
@@ -95,7 +100,7 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Lato', sans-serif;
   }
 }
 
@@ -127,3 +132,87 @@
     overflow: hidden;
   }
 }
+.onhover
+{
+  cursor: pointer;
+}
+.fnt15
+{
+  font-size: 16px !important;
+}
+.fnt15:hover
+{
+  background-color: transparent !important;
+}
+.fnt13
+{
+  font-size: 13px;;
+}
+.fnt13:hover
+{
+  background-color: transparent !important;
+}
+.bgnone
+{
+  background-color: transparent !important;
+}
+ .mt20
+ {
+  margin-top: 28%;
+ }
+ .box-dark
+ {
+  box-shadow: 0px 0px 5px #575757;
+ }
+ @media (max-width: 1100px) {
+  .object-cover
+  {
+    object-fit: fill;
+  }
+  .mt20 {
+    /* margin-top: 28%; */
+    margin-left: -14px;
+    position: absolute;
+    left: 34px;
+    bottom: 26px;
+}
+.backdrop-blur-sm
+{
+  float: left;
+  width: 100%;
+}
+.h-52
+{
+  height: auto;
+  max-height: 320px;
+}
+.mobilecustomhyt
+{
+  background-color: white !important;
+  height: 300px;
+}
+.mobilecustomhyt>img
+{
+  height: 300px;
+}
+
+.mobilecustomthumbnail>button>img
+{
+  object-fit: cover !important;
+}
+.mobilecustomthumbnail>button
+{
+  background-color: white;
+ width: auto;
+ max-width: 140px;
+}
+ }
+.maxhyt80
+{
+  max-height: 60vh;
+}
+
+ /* .h-52
+ {
+  min-height: ;
+ } */

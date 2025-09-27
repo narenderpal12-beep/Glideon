@@ -2,7 +2,7 @@ import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
+// import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { CartProvider } from "@/contexts/CartContext";
 import { useAuth } from "@/hooks/useAuth";
@@ -14,6 +14,7 @@ import Login from "@/pages/Login";
 import Register from "@/pages/Register";
 import Products from "@/pages/Products";
 import ProductDetail from "@/pages/ProductDetail";
+import OrderDetail from "@/pages/OrderDetail";
 import Cart from "@/pages/Cart";
 import Checkout from "@/pages/Checkout";
 import Profile from "@/pages/Profile";
@@ -32,11 +33,12 @@ import HelpCenter from "@/pages/HelpCenter";
 import ShippingInfo from "@/pages/ShippingInfo";
 import Returns from "@/pages/Returns";
 import TrackOrder from "@/pages/TrackOrder";
+import FitnessLevels from "@/pages/FitnessLevels";
 import Careers from "@/pages/Careers";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsOfService from "@/pages/TermsOfService";
 import Sitemap from "@/pages/Sitemap";
-
+import ScrollToTop from "./ScrollToTop";
 function Router() {
   const { isAuthenticated, isLoading } = useAuth();
   // Initialize theme system
@@ -49,7 +51,8 @@ function Router() {
       <Route path="/register" component={Register} />
       <Route path="/" component={Home} />
       <Route path="/products" component={Products} />
-      <Route path="/products/:slug" component={ProductDetail} />
+      <Route path="/products/:id" component={ProductDetail} />
+      <Route path="/order/:orderId" component={OrderDetail} />
       <Route path="/cart" component={Cart} />
       <Route path="/checkout" component={Checkout} />
       <Route path="/profile" component={Profile} />
@@ -59,6 +62,7 @@ function Router() {
       <Route path="/admin/products/edit/:id" component={EditProduct} />
       <Route path="/admin/categories" component={AdminCategories} />
       <Route path="/admin/orders" component={AdminOrders} />
+      <Route path="/admin/orders/:orderId" component={OrderDetail} />
       <Route path="/admin/dashboard" component={AdminDashboard} />
       <Route path="/admin/users" component={AdminUsers} />
       <Route path="/admin/content" component={AdminContent} />
@@ -68,6 +72,7 @@ function Router() {
       <Route path="/shipping-info" component={ShippingInfo} />
       <Route path="/returns" component={Returns} />
       <Route path="/track-order" component={TrackOrder} />
+      <Route path="/fitness-levels" component={FitnessLevels} />
       <Route path="/careers" component={Careers} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-of-service" component={TermsOfService} />
@@ -82,10 +87,12 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
         <CartProvider>
-          <TooltipProvider>
+          <div>
             <Toaster />
+            <ScrollToTop>
             <Router />
-          </TooltipProvider>
+            </ScrollToTop>
+          </div>
         </CartProvider>
       </ThemeProvider>
     </QueryClientProvider>
