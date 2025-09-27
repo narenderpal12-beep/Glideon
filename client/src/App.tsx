@@ -62,7 +62,6 @@ function Router() {
       <Route path="/admin/products/edit/:id" component={EditProduct} />
       <Route path="/admin/categories" component={AdminCategories} />
       <Route path="/admin/orders" component={AdminOrders} />
-      <Route path="/admin/orders/:orderId" component={OrderDetail} />
       <Route path="/admin/dashboard" component={AdminDashboard} />
       <Route path="/admin/users" component={AdminUsers} />
       <Route path="/admin/content" component={AdminContent} />
