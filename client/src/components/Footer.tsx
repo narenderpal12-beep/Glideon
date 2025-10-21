@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import WhatsAppButton from './WhatsAppButton'
 import { useQuery } from "@tanstack/react-query";
 interface SiteSetting {
   key: string;
@@ -84,7 +85,7 @@ export default function Footer() {
   const socialLinks = [
     { href: "#", icon: "fab fa-facebook-f", label: "Facebook" },
     { href: "#", icon: "fab fa-twitter", label: "Twitter" },
-    { href: "#", icon: "fab fa-instagram", label: "Instagram" },
+    { href: "https://www.instagram.com/glideonindia?igsh=MWg1Y3hqamZibThidQ==&utm_source=ig_contact_invite", icon: "fab fa-instagram", label: "Instagram" },
     { href: "#", icon: "fab fa-youtube", label: "YouTube" },
   ];
 
@@ -132,6 +133,7 @@ export default function Footer() {
                 <a
                   key={index}
                   href={social.href}
+                  target="_blank"
                   className="text-gray-400 hover:text-glideon-red transition-colors duration-200"
                   aria-label={social.label}
                   data-testid={`social-${social.label.toLowerCase()}`}
@@ -190,6 +192,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+  <WhatsAppButton />
     </footer>
   );
 }

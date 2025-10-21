@@ -24,14 +24,14 @@ export default function PromoBanner() {
               <div>
                 <div className="flex items-center space-x-2">
                   <span className="text-lg font-bold" data-testid="banner-discount">
-                    20% OFF
+                    5% OFF
                   </span>
                   <span className="text-sm opacity-90">
                     Your First Order
                   </span>
                 </div>
                 <div className="text-xs opacity-80">
-                  Code: GLIDEON20
+                  Code: GLIDEON05
                 </div>
               </div>
             </div>
