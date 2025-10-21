@@ -1045,11 +1045,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
         }
       });
       const mailOptions = {
-        from: 'sachdevamannji@gmail.com',
+        from: 'glideonhealth@gmail.com',
         to: req.user.email, // The recipient's email address (where you want to send the contact info)
-        subject: 'Order Places Successfully',
-        cc:'sachdevamannji@gmail.com',
-        bcc:'bankush28@gmail.com',          
+        subject: 'Order Places Successfully',        
+        bcc:['bankush28@gmail.com','Avinashkakkar74@gmail.com','Crownlabz@gmail.com', 'sachdevamannji@gmail.com']  ,       
         html: htmlContent, 
             };
    
