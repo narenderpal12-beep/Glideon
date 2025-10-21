@@ -200,7 +200,7 @@ export default function Checkout() {
   const subtotal = calculateCartTotal();
   const discount = appliedOffer ? appliedOffer.discountAmount : 0;
   const shipping = subtotal >= 50 ? 0 : 9.99;
-  const tax = (subtotal - discount) * 0.08;
+  const tax = (subtotal - discount) * 0.00;
   const finalTotal = subtotal - discount + shipping + tax;
 
   const enrichedCartItems = cartItems.map((item) => {
@@ -492,7 +492,7 @@ export default function Checkout() {
                     <span>Shipping</span>
                     <span>{shipping === 0 ? "FREE" : formatPrice(shipping)}</span>
                   </div>
-                  <div className="flex justify-between text-sm">
+                  <div className="flex justify-between text-sm nodisplay" >
                     <span>Tax</span>
                     <span>{formatPrice(tax)}</span>
                   </div>

@@ -33,7 +33,7 @@ export default function Cart() {
   };
 
   const shipping = calculateCartTotal() >= 50 ? 0 : 9.99;
-  const tax = calculateCartTotal() * 0.08; // 8% tax
+  const tax = calculateCartTotal() * 0.00; // 8% tax
   const finalTotal = calculateCartTotal() + shipping + tax;
 
   return (

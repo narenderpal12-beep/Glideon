@@ -305,10 +305,10 @@ export default function OrderDetail() {
                       {order.shippingAddress?.appliedOffer?.discountAmount}
                     </span>
                   </div>
-                  <div className="flex justify-between text-sm">
+                  <div className="flex justify-between text-sm nodisplay" >
                     <span className="text-gray-500 dark:text-gray-400">Tax</span>
                     <span className="text-gray-900 dark:text-white">
-                    {formatPrice((calculateSubtotal() - (order.shippingAddress?.appliedOffer?.discountAmount || 0)) * 0.08)}
+                    {formatPrice((calculateSubtotal() - (order.shippingAddress?.appliedOffer?.discountAmount || 0)) * 0.00)}
                   </span>
                   </div>
                   <Separator className="my-2" />

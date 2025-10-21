@@ -154,7 +154,7 @@ export default function Login() {
               </form>
 
               {/* Demo Credentials */}
-              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
+              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg" style={{display:'none'}}>
                 <h3 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
                   Demo Credentials:
                 </h3>

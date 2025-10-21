@@ -22,7 +22,7 @@ export default function Home() {
         <FeaturedProducts />
         <ShopByLevelSection />
         <InHighDemandSection />
-        <PromoSection />
+        {/* <PromoSection /> */}
         <TestimonialsSection />
         <NewsletterSection />
       </main>
