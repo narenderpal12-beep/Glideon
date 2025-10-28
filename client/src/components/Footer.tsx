@@ -193,6 +193,12 @@ export default function Footer() {
         </div>
       </div>
   <WhatsAppButton />
+  {/* <a href="tel:+919168029000" className="callbutton">
+  📞
+</a> */}
+<a href="https://verify.glideonhealth.com/"  target="_blank" className="verifybutton">
+  ✅ Verify Now
+</a>
     </footer>
   );
 }
