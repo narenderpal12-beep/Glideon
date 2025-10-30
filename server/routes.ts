@@ -1040,15 +1040,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const transporter = nodemailer.createTransport({
         service: 'gmail', // You can replace this with your email service provider
         auth: {
-          user: 'sachdevamannji@gmail.com', // Your email address
-          pass: 'bwehltlfcquiqgyn'   // Your email password (or app-specific password)
+          user: 'glideonhealth@gmail.com', // Your email address
+          pass: 'ihajuiqhnroamgwr'   // Your email password (or app-specific password)
         }
       });
       const mailOptions = {
         from: 'glideonhealth@gmail.com',
         to: req.user.email, // The recipient's email address (where you want to send the contact info)
         subject: 'Order Places Successfully',        
-        bcc:['bankush28@gmail.com','Avinashkakkar74@gmail.com','Crownlabz@gmail.com', 'sachdevamannji@gmail.com']  ,       
+        bcc:['bankush28@gmail.com','glideonhealth@gmail.com','Avinashkakkar74@gmail.com','Crownlabz@gmail.com']  ,       
         html: htmlContent, 
             };
    
